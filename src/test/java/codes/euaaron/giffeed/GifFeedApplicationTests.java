@@ -55,6 +55,7 @@ class GifFeedApplicationTests {
             assertNotNull(response);
         } catch (Exception e) {
             System.err.println("Este teste depende que a API esteja em execução. Inicie a API e teste novamente.");
+            fail();
         }
     }
 
