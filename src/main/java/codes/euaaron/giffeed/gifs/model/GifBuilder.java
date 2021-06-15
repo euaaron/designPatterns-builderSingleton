@@ -8,22 +8,17 @@ public class GifBuilder {
     public GifBuilder() { gif = new Gif(); }
 
     public Gif build() {
-        if(gif.getId().equals("empty")) {
-            throw new IllegalArgumentException("Invalid gif id.");
+        if(gif.getId() == null) {
+            throw new NullPointerException("GIF id cannot be empty");
         }
-        if(gif.getUrl().equals("")) {
-            throw new IllegalArgumentException("Invalid url.");
+        if(gif.getUrl() == null) {
+            throw new NullPointerException("URL cannot be empty");
         }
         return gif;
     }
 
     public GifBuilder setId(String id) {
         gif.setId(id);
-        return this;
-    }
-
-    public GifBuilder setTitle(String title) {
-        gif.setTitle(title);
         return this;
     }
 

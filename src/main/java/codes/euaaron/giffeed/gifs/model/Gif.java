@@ -7,7 +7,6 @@ import java.util.List;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Gif {
     public String id;
-    public String title;
     public String long_title;
     public String url;
     public List<String> tags;
@@ -23,14 +22,6 @@ public class Gif {
 
     public void setId(String id) {
         this.id = id;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
     }
 
     public String getLong_Title() {
