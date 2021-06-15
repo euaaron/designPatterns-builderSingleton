@@ -15,7 +15,8 @@ public class GifController {
     public String root() {
         return   "Welcome to GIFFeed!\n"
                 + "<h1>Go to localhost:8080/gif?search=yourSearchTerm</h1>\n"
-                + "You can also limit results to any number. Ex.: Limit to 15 by adding ?limit=15 to the end of the URL.";
+                + "You can also limit results to any number. Ex.: Limit to 15 by adding ?limit=15 to the end of the URL.\n"
+                + "<small>API made by <a href='https://github.com/euaaron'>Aaron Carneiro</a></small>";
     }
 
     @GetMapping("/gif")
