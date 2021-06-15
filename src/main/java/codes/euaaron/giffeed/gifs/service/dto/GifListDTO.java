@@ -1,5 +1,6 @@
-package codes.euaaron.giffeed.gifs.model;
+package codes.euaaron.giffeed.gifs.service.dto;
 
+import codes.euaaron.giffeed.gifs.model.Gif;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import java.util.List;
