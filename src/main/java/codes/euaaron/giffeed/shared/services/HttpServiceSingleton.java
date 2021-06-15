@@ -6,16 +6,16 @@ import org.springframework.web.client.HttpStatusCodeException;
 import org.springframework.web.client.RestTemplate;
 
 @Service
-public class HttpService {
-    private static HttpService instance = new HttpService(new RestTemplateBuilder());
+public class HttpServiceSingleton {
+    private static HttpServiceSingleton instance = new HttpServiceSingleton(new RestTemplateBuilder());
 
     private final RestTemplate rest;
 
-    public HttpService(RestTemplateBuilder restTemplateBuilder) {
+    public HttpServiceSingleton(RestTemplateBuilder restTemplateBuilder) {
         this.rest = restTemplateBuilder.build();
     }
 
-    public static HttpService getInstance() { return instance; }
+    public static HttpServiceSingleton getInstance() { return instance; }
 
     public String doGet(String url) {
         try {

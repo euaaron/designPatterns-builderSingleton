@@ -1,7 +1,7 @@
 package codes.euaaron.giffeed.gifs.controller;
 
 import codes.euaaron.giffeed.gifs.model.Gif;
-import codes.euaaron.giffeed.gifs.service.TenorService;
+import codes.euaaron.giffeed.gifs.service.TenorServiceSingleton;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -23,7 +23,7 @@ public class GifController {
             @RequestParam(value = "search", defaultValue = "simpsons") String search,
             @RequestParam(value = "limit", defaultValue = "5") Integer limit
     ) {
-        return TenorService.getInstance().GetGif(search, limit);
+        return TenorServiceSingleton.getInstance().GetGif(search, limit);
     }
 
 }
